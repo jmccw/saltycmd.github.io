@@ -30,7 +30,7 @@
 			/* Fading animation */
 			.fade {
 				animation-name: fade;
-				animation-duration: 3s; /* Adjust the animation duration as needed */
+				animation-duration: 8s; /* Adjust the animation duration as needed */
 				animation-timing-function: ease-in-out;
 			}
 
@@ -38,11 +38,16 @@
 				0% {
 					opacity: 0;
 				}
-				100% {
+				25% {
 					opacity: 1;
 				}
+				75% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
 			}
-
 		</style>
 	</head>
 	<body class="is-preload">
@@ -74,6 +79,8 @@
 					<!-- Social Icons -->
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+
 						</ul>
 
 				</div>
@@ -89,7 +96,7 @@
 
 							<header>
 								<h2 class="alt">Jordan Walsh</a>.</h2>
-								<p>Developer, Creator, Overthinker</p>
+								<p>Developer | Creator | Overthinker</p>
 								<p>Undergraduate Physics (Final Year)</p>
 							</header>
 
@@ -244,7 +251,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; saltycmd. All rights reserved.</li><li>Design: adaptation of 'Prologue' (<a href="http://html5up.net">HTML5 UP</a>)</li>
 					</ul>
 
 			</div>
@@ -296,6 +303,7 @@
     				return Math.random() * (max - min) + min;
 				}
 				function showSlides() {
+				  var t = randomNumber(5000, 10000);
 				  let i;
 				  const slides = document.getElementsByClassName("mySlides");
 			  
@@ -312,7 +320,7 @@
 				  slides[slideIndex - 1].style.display = "block";
 			  
 				  // Change slides every 3 seconds (adjust the timing as needed)
-				  setTimeout(showSlides, randomNumber(5000, 10000));
+				  setTimeout(showSlides, 8000);
 				}
 			  </script>
 			  
