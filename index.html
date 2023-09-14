@@ -13,6 +13,37 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Slideshow container */
+			.slideshow-container {
+				position: relative;
+				max-width: 100%;
+				overflow: hidden;
+			}
+
+			/* Hide all slides by default */
+			.mySlides {
+				display: none;
+				transition: opacity 1s;
+			}
+
+			/* Fading animation */
+			.fade {
+				animation-name: fade;
+				animation-duration: 3s; /* Adjust the animation duration as needed */
+				animation-timing-function: ease-in-out;
+			}
+
+			@keyframes fade {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -58,7 +89,7 @@
 
 							<header>
 								<h2 class="alt">Jordan Walsh</a>.</h2>
-								<p>Developer   |   Creator   |   Overthinker</p>
+								<p>Developer, Creator, Overthinker</p>
 								<p>Undergraduate Physics (Final Year)</p>
 							</header>
 
@@ -88,6 +119,7 @@
 							<!-- <p>Various projects and reports completed before or during my Undergraduate.</p> -->
 
 							<div class="row">
+								<!--
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
@@ -95,15 +127,30 @@
 											<h3>Academic</h3>
 										</header>
 									</article>
-									<!--
+
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 										<header>
 											<h3>Rhoncus Semper</h3>
 										</header>
 									</article>
-									-->
 								</div>
+								-->
+								<div class="col-4 col-12-mobile">
+									<div class="item">
+										<a href="#" class="image fit">
+											<div class="slideshow-container">
+												<img src="images/pic10.jpg" alt="Image 1" class="mySlides fade" />
+												<img src="images/pic11.jpg" alt="Image 2" class="mySlides fade" />
+												<img src="images/pic06.jpg" alt="Image 3" class="mySlides fade" />
+											</div>
+										</a>
+										<header>
+											<h3>Academic</h3>
+										</header>
+									</div>
+								</div>
+								
 								<div class="col-4 col-12-mobile">
 									<article class="item">
 										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
@@ -242,7 +289,33 @@
 			            });
 			    });
 			</script>
-
-
+			<script>
+				let slideIndex = 0;
+				showSlides();
+				function randomNumber(min, max) {
+    				return Math.random() * (max - min) + min;
+				}
+				function showSlides() {
+				  let i;
+				  const slides = document.getElementsByClassName("mySlides");
+			  
+				  for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				  }
+			  
+				  slideIndex++;
+			  
+				  if (slideIndex > slides.length) {
+					slideIndex = 1;
+				  }
+			  
+				  slides[slideIndex - 1].style.display = "block";
+			  
+				  // Change slides every 3 seconds (adjust the timing as needed)
+				  setTimeout(showSlides, randomNumber(5000, 10000));
+				}
+			  </script>
+			  
+			
 	</body>
 </html>
