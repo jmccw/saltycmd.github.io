@@ -27,7 +27,6 @@
 							<h1 id="title">Jordan Walsh</h1>
 							<p>Student | Physics</p>
 						</div>
-
 					<!-- Nav -->
 						<!-- <nav id="nav">
 							<ul>
@@ -37,7 +36,6 @@
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav> -->
-
 				</div>
 
 				<div class="bottom">
@@ -65,7 +63,15 @@
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Curriculum Vitae</a>
+								<head>
+								    <meta charset="UTF-8">
+								    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+								    <title>GitHub File Downloader</title>
+								</head>
+								<body>
+								    <button id="downloadButton">Download File</button>
+								</body>
+								<!-- <a href="#portfolio" class="button scrolly">Curriculum Vitae</a> -->
 							</footer>
 
 						</div>
@@ -198,6 +204,39 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			    const downloadButton = document.getElementById('downloadButton');
+			
+			    downloadButton.addEventListener('click', () => {
+			        const username = 'YOUR_USERNAME';
+			        const repo = 'YOUR_REPO';
+			        const branch = 'BRANCH_NAME';
+			        const filePath = 'FILE_PATH';
+			
+			        const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${filePath}?ref=${branch}`;
+			
+			        fetch(apiUrl)
+			            .then((response) => response.json())
+			            .then((data) => {
+			                const content = atob(data.content); // Decode base64 content
+			                const blob = new Blob([content], { type: 'application/octet-stream' });
+			                const url = URL.createObjectURL(blob);
+			
+			                const a = document.createElement('a');
+			                a.style.display = 'none';
+			                a.href = url;
+			                a.download = filePath.split('/').pop(); // Extract filename from path
+			                document.body.appendChild(a);
+			
+			                a.click();
+			                URL.revokeObjectURL(url);
+			            })
+			            .catch((error) => {
+			                console.error('Error:', error);
+			            });
+			    });
+			</script>
+
 
 	</body>
 </html>
