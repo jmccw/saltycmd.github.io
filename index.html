@@ -23,7 +23,7 @@
 .timeline {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: normal; /*position of left text to rigth*/
   margin-left: 0%; /* Spacing between timeline and job description */
 }
 
@@ -31,7 +31,7 @@
   width: 20px; /* Diameter of circular nodes */
   height: 1px;
   background-color: #000;
-  border-radius: 50%;
+  border-radius: 0%;
   margin-right: 48%; /* Spacing between nodes and job descriptions */
   z-index: -1; /* =1 to Ensure nodes appear above the line, -1 = hidden */
 }
@@ -49,9 +49,9 @@
   line-height: 1.5;
   font-size: 16px;
   text-align: right;
-  padding-right: 0%; /* Spacing between nodes and job descriptions */
+  padding-right: 40px; /* Spacing between nodes and job descriptions */
   border-right: 1px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
-  position: absolute; /* Add relative positioning */
+  position: relative; /* Add relative positioning */
 }
 
 /* Vertical line style */
@@ -336,7 +336,7 @@
 								<div class="timeline-node"></div>
 									<div class="job-description_left">
 										<h3>2022</h3>
-										<p>Teaching Assistant | School of Physics</p>
+										<p>Teachin testing</p>
 										<!-- Additional job description content -->
 									</div>
 									<div class="job-description">
