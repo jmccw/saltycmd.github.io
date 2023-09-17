@@ -14,6 +14,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
+
+.timeline-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 0%; /* Spacing between timeline and job description */
+}
+
+.timeline-node {
+  width: 20px; /* Diameter of circular nodes */
+  height: 1px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 48%; /* Spacing between nodes and job descriptions */
+  z-index: -1; /* =1 to Ensure nodes appear above the line, -1 = hidden */
+}
+
+.job-description {
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 40px; /* Spacing between nodes and job descriptions */
+  border-left: 1.5px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
+  position: relative; /* Add relative positioning */
+}
+
+.job-description_left {
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 0%; /* Spacing between nodes and job descriptions */
+  border-right: 1px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
+  position: absolute; /* Add relative positioning */
+}
+
+/* Vertical line style */
+.timeline::before {
+  content: "";
+  width: 2px; /* Width of the vertical line */
+  height: 100%; /* Full height of the timeline container */
+  background-color: #000;
+  position: absolute;
+  left: 0%; /* Position in the middle of the timeline container */
+  top: 30px;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: -1; /* Place the line behind nodes and job descriptions */
+}
+
 			/* Slideshow container */
 			.slideshow-container {
 				position: relative;
@@ -85,17 +139,17 @@
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
 							<h1 id="title">Jordan Walsh</h1>
-							<p>Student | Physics</p>
+							<p>Student</p>
 						</div>
 					<!-- Nav -->
-						<!-- <nav id="nav">
+						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
-						</nav> -->
+						</nav> 
 				</div>
 
 				<div class="bottom">
@@ -245,6 +299,54 @@
 							<p>
 								I am open to work on anything research related, software based and project orientated.
 							</p>
+							
+							<div class="timeline">
+								<div class="timeline-node"></div>
+									<div class="job-description_left">
+										<h3>Summer 2023</h3>
+										<p> </p>
+										<!-- Additional job description content -->
+									</div>
+									<div class="job-description">
+									<h3>Tyndall National Institute</h3>
+									<p>Research Intern | III-V Materials and Devices
+										<br>Cork, Ireland
+									</p>
+
+
+								  <!-- Additional job description content -->
+								</div>
+							</div>
+							
+							<div class="timeline">
+								<div class="timeline-node"></div>
+									<div class="job-description_left">
+										<h3>University College Cork</h3>
+										<p>Teaching Assistant | School of Physics</p>
+										<!-- Additional job description content -->
+									</div>
+									<div class="job-description">
+										<h3>University College Cork</h3>
+										<p>Teaching Assistant | School of Physics</p>
+										<!-- Additional job description content -->
+									</div>
+							</div>
+
+							<div class="timeline">
+								<div class="timeline-node"></div>
+									<div class="job-description_left">
+										<h3>2022</h3>
+										<p>Teaching Assistant | School of Physics</p>
+										<!-- Additional job description content -->
+									</div>
+									<div class="job-description">
+										<h3>UCC Physics and Astronomy Society</h3>
+										<p>Committee Member | GPRO</p>
+										<!-- Additional job description content -->
+									</div>
+							</div>
+													  
+							
 
 						</div>
 					</section>
