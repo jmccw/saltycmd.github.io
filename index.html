@@ -19,20 +19,42 @@
 				position: relative;
 				max-width: 100%;
 				max-height: 100%;
-				height: 300px;
+				height: 200px;
 				overflow: hidden;
 			}
 
 			/* Hide all slides by default */
-			.mySlides {
+			.mySlides_Creative {
+				display: none;
+				transition: opacity 1s;
+			}
+
+			.mySlides_Academic {
+				display: none;
+				transition: opacity 1s;
+			}
+
+			.mySlides_Research {
 				display: none;
 				transition: opacity 1s;
 			}
 
 			/* Fading animation */
-			.fade {
+			.fade_8 {
 				animation-name: fade;
 				animation-duration: 8s; /* Adjust the animation duration as needed */
+				animation-timing-function: ease-in-out;
+			}
+
+			.fade_6 {
+				animation-name: fade;
+				animation-duration: 6s; /* Adjust the animation duration as needed */
+				animation-timing-function: ease-in-out;
+			}
+
+			.fade_7 {
+				animation-name: fade;
+				animation-duration: 7s; /* Adjust the animation duration as needed */
 				animation-timing-function: ease-in-out;
 			}
 
@@ -93,110 +115,110 @@
 			<div id="main">
 
 				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+				<section id="top" class="one dark cover">
+					<div class="container">
 
-							<header>
-								<h2 class="alt">Jordan Walsh</a>.</h2>
-								<p>Undergraduate Physics (Final Year)</p>
-							</header>
+						<header>
+							<h2 class="alt">Jordan Walsh</a>.</h2>
+							<p>Undergraduate Physics (Final Year)</p>
+						</header>
 
-							<footer>
-								<head>
-								    <meta charset="UTF-8">
-								    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-								    <title>GitHub File Downloader</title>
-								</head>
-								<body>
-								    <button id="downloadButton">Curriculum Vitae</button>
-								</body>
-								<!-- <a href="#portfolio" class="button scrolly">Curriculum Vitae</a> -->
-							</footer>
+						<footer>
+							<head>
+								<meta charset="UTF-8">
+								<meta name="viewport" content="width=device-width, initial-scale=1.0">
+								<title>GitHub File Downloader</title>
+							</head>
+							<body>
+								<button id="downloadButton">Curriculum Vitae</button>
+							</body>
+							<!-- <a href="#portfolio" class="button scrolly">Curriculum Vitae</a> -->
+						</footer>
 
-						</div>
-					</section>
+					</div>
+				</section>
 
 				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+				<section id="portfolio" class="two">
+					<div class="container">
+						<header>
+							<h2>Portfolio</h2>
+						</header>
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+						<!-- <p>Various projects and reports completed before or during my Undergraduate.</p> -->
 
-							<!-- <p>Various projects and reports completed before or during my Undergraduate.</p> -->
+						<div class="row">
+							<!-- #DEFAULT
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<header>
+										<h3>Academic</h3>
+									</header>
+								</article>
 
-							<div class="row">
-								<!--
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Academic</h3>
-										</header>
-									</article>
-
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								-->
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Academic</h3>
-										</header>
-									<!--
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-									-->
-								</div>
-
-								<div class="col-4 col-12-mobile">
-									<div class="item">
-										<a href="#" class="image fit">
-											<div class="slideshow-container">
-												<img src="images/pic04.jpg" alt="Image 1" class="mySlides fade" />
-												<img src="images/pic07.jpg" alt="Image 2" class="mySlides fade" />
-												<img src="images/pic12.jpg" alt="Image 3" class="mySlides fade" />
-												
-											</div>
-										</a>
-										<header>
-											<h3>Creative</h3>
-										</header>
-									</div>
-								</div>
+								<article class="item">
+									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<header>
+										<h3>Rhoncus Semper</h3>
+									</header>
+								</article>
+							</div>
+							-->
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<a href="#" class="image fit">
+										<div class="slideshow-container">
+											<img src="images/pic04.jpg" alt="Image 1" class="mySlides_Academic fade_6" />
+											<img src="images/pic07.jpg" alt="Image 2" class="mySlides_Academic fade_6" />
+											<img src="images/pic12.jpg" alt="Image 3" class="mySlides_Academic fade_6" />
+											
+										</div>
+									</a>
+									<header>
+										<h3>Academic</h3>
+									</header>
 								
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Research</h3>
-										</header>
-									</article>
-									<!--
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article> 
-									-->
-								</div>
+								</article>
+								
 							</div>
 
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<a href="#" class="image fit">
+										<div class="slideshow-container">
+											<img src="images/pic04.jpg" alt="Image 1" class="mySlides_Creative fade_8" />
+											<img src="images/pic07.jpg" alt="Image 2" class="mySlides_Creative fade_8" />
+											<img src="images/pic12.jpg" alt="Image 3" class="mySlides_Creative fade_8" />
+											
+										</div>
+									</a>
+									<header>
+										<h3>Creative</h3>
+									</header>
+								
+								</article>
+							</div>
+
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<a href="#" class="image fit">
+										<div class="slideshow-container">
+											<img src="images/pic10.jpg" alt="Image 1" class="mySlides_Research fade_7" />
+											<img src="images/pic04.jpg" alt="Image 2" class="mySlides_Research fade_7" />
+											<img src="images/pic11.jpg" alt="Image 3" class="mySlides_Research fade_7" />
+											
+										</div>
+									</a>
+									<header>
+										<h3>Research</h3>
+									</header>
+								
+								</article>
+							</div>
 						</div>
-					</section>
+					</div>	
+				</section>
 
 				<!-- About Me -->
 					<section id="about" class="three">
@@ -208,17 +230,21 @@
 
 							<a href="#" class="image featured"><img src="images/banner1.jpg" alt="" /></a>
 
-							<p>Undergraduate Physics (Final Year) with experience in AI/ML, semiconductor device 
-								testing and a strong scripting/programming ability. <!--I am familiar and highly proficient in multiple
-								programming languages; notably C/C++ (and adjacent), C#, Python, LabVIEW. I do not struggle to adapt
-								to unfamiliar languages. 
+							<p>I am an undergraduate in Physics (Final Year) with experience in AI/Machine Learning, semiconductor device 
+								testing, and scripting/programming. I am familiar and proficient with multiple
+								programming languages; notably C/C++ (and adjacent), C#, Python, and LabVIEW. I do not struggle to adapt
+								to new languages. 
+							</p>
+							<p>
+								Through physics, I have been exposed to computational techniques such as reinforcement
+								learning, Rutte Kunge methods, numerical integration/differentiation, and the mathematical moddelling of various dynamic
+								systems. Adjacent to my studies I have 
+								taken time to familiarise myself with development tools such as Git and the Linux Operating System. I have an extensive 
 								
-								Through physics, I am formally educated and trained in computational techniques such as reinforcement
-								learning, Rutte Kunge methods, numerical integration/differentiation, and mathematical moddelling of dynamical
-								physical systems. Adjacent to my studies I have 
-								taken time to familiarise myself with development tools such as Git and the Linux Operating System. 
-								
-								I enjoy tinkering with hardware and electronics. --></p>
+							</p>
+							<p>
+								I am open to work on anything research related, software based and project orientated.
+							</p>
 
 						</div>
 					</section>
@@ -231,7 +257,12 @@
 								<h2>Contact</h2>
 							</header>
 
-							<p>jmcc097@gmail.com | GitHub: saltycmd</p>
+							<p>jmcc097@gmail.com</p>
+							<ul class="icons">
+								<li><a href="https://github.com/saltycmd" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.linkedin.com/in/jordan-walsh-9a7534258/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+	
+							</ul>
 
 							<!-- <form method="post" action="#">
 								<div class="row">
@@ -256,7 +287,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; saltycmd. All rights reserved.</li><li>Design: adaptation of 'Prologue' (<a href="http://html5up.net">HTML5 UP</a>)</li>
+						<li>&copy; saltycmd. All rights reserved.</li><li>Design: custom adaptation of 'Prologue' (<a href="http://html5up.net">HTML5 UP</a>)</li>
 					</ul>
 
 			</div>
@@ -303,14 +334,13 @@
 			</script>
 			<script>
 				let slideIndex = 0;
-				showSlides();
+				showSlides_Creative();
 				function randomNumber(min, max) {
     				return Math.random() * (max - min) + min;
 				}
-				function showSlides() {
-				  var t = randomNumber(5000, 10000);
+				function showSlides_Creative() {
 				  let i;
-				  const slides = document.getElementsByClassName("mySlides");
+				  const slides = document.getElementsByClassName("mySlides_Creative");
 			  
 				  for (i = 0; i < slides.length; i++) {
 					slides[i].style.display = "none";
@@ -325,7 +355,59 @@
 				  slides[slideIndex - 1].style.display = "block";
 			  
 				  // Change slides every 3 seconds (adjust the timing as needed)
-				  setTimeout(showSlides, 8000);
+				  setTimeout(showSlides_Creative, 8000);
+				}
+			  </script>
+			  <script>
+				let slideIndex_A = 0;
+				showSlides_Academic();
+				function randomNumber(min, max) {
+    				return Math.random() * (max - min) + min;
+				}
+				function showSlides_Academic() {
+				  let i;
+				  const slides_a = document.getElementsByClassName("mySlides_Academic");
+			  
+				  for (i = 0; i < slides_a.length; i++) {
+					slides_a[i].style.display = "none";
+				  }
+			  
+				  slideIndex_A++;
+			  
+				  if (slideIndex_A > slides_a.length) {
+					slideIndex_A = 1;
+				  }
+			  
+				  slides_a[slideIndex_A - 1].style.display = "block";
+			  
+				  // Change slides every 3 seconds (adjust the timing as needed)
+				  setTimeout(showSlides_Academic, 6000);
+				}
+			  </script>
+			  <script>
+				let slideIndex_R = 0;
+				showSlides_Research();
+				function randomNumber(min, max) {
+    				return Math.random() * (max - min) + min;
+				}
+				function showSlides_Research() {
+				  let i;
+				  const slides_r = document.getElementsByClassName("mySlides_Research");
+			  
+				  for (i = 0; i < slides_r.length; i++) {
+					slides_r[i].style.display = "none";
+				  }
+			  
+				  slideIndex_R++;
+			  
+				  if (slideIndex_R > slides_r.length) {
+					slideIndex_R = 1;
+				  }
+			  
+				  slides_r[slideIndex_R - 1].style.display = "block";
+			  
+				  // Change slides every 3 seconds (adjust the timing as needed)
+				  setTimeout(showSlides_Research, 7000);
 				}
 			  </script>
 			  
