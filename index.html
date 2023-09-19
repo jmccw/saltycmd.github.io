@@ -32,8 +32,9 @@
   height: 1px;
   background-color: #000;
   border-radius: 0%;
-  margin-right: 48%; /* Spacing between nodes and job descriptions */
+  margin-left: 0%; /* Spacing between nodes and job descriptions */
   z-index: -1; /* =1 to Ensure nodes appear above the line, -1 = hidden */
+  position: relative;
 }
 
 .job-description {
@@ -41,8 +42,9 @@
   font-size: 16px;
   text-align: left;
   padding-left: 40px; /* Spacing between nodes and job descriptions */
-  border-left: 1.5px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
+  border-left: 2px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
   position: relative; /* Add relative positioning */
+  left: 48.5%;
 }
 
 .job-description_left {
@@ -50,8 +52,10 @@
   font-size: 16px;
   text-align: right;
   padding-right: 40px; /* Spacing between nodes and job descriptions */
-  border-right: 1px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
-  position: relative; /* Add relative positioning */
+  border-right: 0px solid #5A5A5A; /* Vertical line connecting nodes and job descriptions */
+  margin-left: 0%;
+  position: absolute; /* Add relative positioning */
+  right: 50%;
 }
 
 /* Vertical line style */
@@ -303,8 +307,8 @@
 							<div class="timeline">
 								<div class="timeline-node"></div>
 									<div class="job-description_left">
-										<h3>Summer 2023</h3>
-										<p> </p>
+										<h3>2023</h3>
+										<p>June - September</p>
 										<!-- Additional job description content -->
 									</div>
 									<div class="job-description">
@@ -321,8 +325,9 @@
 							<div class="timeline">
 								<div class="timeline-node"></div>
 									<div class="job-description_left">
-										<h3>University College Cork</h3>
-										<p>Teaching Assistant | School of Physics</p>
+										<h3> </h3>
+										<p> <br>Academic Year 22/23</p>
+										
 										<!-- Additional job description content -->
 									</div>
 									<div class="job-description">
@@ -336,7 +341,7 @@
 								<div class="timeline-node"></div>
 									<div class="job-description_left">
 										<h3>2022</h3>
-										<p>Teachin testing</p>
+										<p>May 2022 - May 2023</p>
 										<!-- Additional job description content -->
 									</div>
 									<div class="job-description">
@@ -346,8 +351,6 @@
 									</div>
 							</div>
 													  
-							
-
 						</div>
 					</section>
 
