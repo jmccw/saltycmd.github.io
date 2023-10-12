@@ -1,4 +1,4 @@
-Static personal website based on Prologue by HTML5 UP
+Static personal website based on Prologue by HTML5 UP | This website is under construction
 
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
